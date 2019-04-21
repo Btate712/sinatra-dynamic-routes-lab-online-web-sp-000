@@ -10,4 +10,9 @@ class App < Sinatra::Base
     number = params[:number].to_i
     "#{number} squared = #{number.**2}."
   end
+
+  get '/say/:number/:phrase' do
+    for i in params[:number]
+      "#{params[:phrase]}\n"
+  end
 end
