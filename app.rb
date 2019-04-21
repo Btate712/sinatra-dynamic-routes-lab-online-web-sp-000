@@ -31,6 +31,14 @@ class App < Sinatra::Base
 
     if operation == "add"
       output_string = "#{number1} + #{number2} = #{number1 + number2}"
-
+    elsif operation == "subtract"
+      output_string = "#{number1} - #{number2} = #{number1 - number2}"
+    elsif operation == "multiply"
+      output_string = "#{number1} x #{number2} = #{number1 * number2}"
+    elsif operation == "divide"
+      output_string = "#{number1} / #{number2} = #{number1 / number2}"
+    else
+      output_string = "I don't know how to #{operation}."
+    end
   end
 end
