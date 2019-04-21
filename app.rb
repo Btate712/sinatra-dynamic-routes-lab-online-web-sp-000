@@ -5,4 +5,9 @@ class App < Sinatra::Base
   get '/reversename/:name' do
     "#{params[:name].reverse}"
   end
+
+  get '/square/:number' do
+    number = :number.to_i
+    "#{number} squared = #{number.squared}."
+  end
 end
